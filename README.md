@@ -17,7 +17,7 @@ delta metres = delta degrees * pi / 180.0 * 6378137
 
 <h3><b>Technology stack:</b></h3>
 
-* net8.0
+* net9.0
 * Entity framework core in-memory database and Postgres database 
 * CQRS with MediatR 
 * Xunit with FluentAssertions and Moq for unit testing

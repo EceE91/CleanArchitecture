@@ -1,0 +1,10 @@
+<Project>
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);NU1507;NU1903</NoWarn>
+        <TargetFramework>net9.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+</Project>

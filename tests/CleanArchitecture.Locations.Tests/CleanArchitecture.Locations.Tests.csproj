@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>CleanArchitecture.Locations.Webapi.Tests</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\CleanArchitecture.Locations.Application\CleanArchitecture.Locations.Application.csproj" />
+        <ProjectReference Include="..\..\src\CleanArchitecture.locations.WebApi\CleanArchitecture.Locations.WebApi.csproj" />
+        <ProjectReference Include="..\..\src\CleanArchitecture.locations.webapi\CleanArchitecture.Locations.Webapi.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentAssertions"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk"/>
+        <PackageReference Include="Moq"/>
+        <PackageReference Include="xunit"/>
+    </ItemGroup>
+
+</Project>

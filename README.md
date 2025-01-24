@@ -80,11 +80,12 @@ Use an API Gateway to centralize and manage all incoming API traffic. This allow
     /Application
 	/Services - LocationDistanceCalculatorService.cs
 	/Commands (I use CQRS with MediatR) - AddLocationCommand.cs - UpdateLocationCommand.cs
-	/Handlers AddLocationCommandHandler.cs - UpdateLocationCommandHandler.cs - GetAllLocationsQueryHandler.cs - AddLocationCommandValidator.cs - UpdateLocationCommandValidator.cs
+	/Handlers AddLocationCommandHandler.cs - UpdateLocationCommandHandler.cs - GetAllLocationsQueryHandler.cs
 	/Queries - GetAllLocationsQuery.cs
         /DTOs - DistanceDto.cs, LocationDto
         /Interfaces - ILocationDistanceCalculatorService.cs
 	/Mappings - LocationProfile.cs
+	/Validators - AddLocationCommandValidator.cs - UpdateLocationCommandValidator.cs
     /Infrastructure
         /Persistence - ApiDbContextSeed.cs, ApiDbContext.cs
 	/Repository - LocationRepository.cs
@@ -96,11 +97,16 @@ Use an API Gateway to centralize and manage all incoming API traffic. This allow
         /Middleware - GlobalExceptionHandler.cs
 	/Json - DefaultJsonSerializerSettings.cs - LatitudeJsonConverter.cs - LongitudeJsonConverter.cs
 	Program.cs
-    /tests (it uses efcore in-memory db for testing purposes)
-        /Factories - CustomWebApplicationFactory.cs
-        /Extensions - JsonSerializerExtensions.cs
-        /UnitTests - ApiDbContextIntegrationTests.cs - LocationsControllerIntegrationTests.cs - DistanceCalculatorControllerIntegrationTests.cs
-        /IntegrationTests - LocationsControllerTests.cs - DistanceCalculatorControllerTests.cs
+/tests (it uses efcore in-memory db for testing purposes)
+    /Factories - CustomWebApplicationFactory.cs
+    /Extensions - JsonSerializerExtensions.cs
+    /UnitTests - ApiDbContextIntegrationTests.cs - LocationsControllerIntegrationTests.cs - DistanceCalculatorControllerIntegrationTests.cs
+    /IntegrationTests - LocationsControllerTests.cs - DistanceCalculatorControllerTests.cs
+/pipelines
+global.json
+.gitignore
+Directory.Packages.props
+Directory.Build.props
 ```
 
 This implementation creates a robust and maintainable ASP.NET Core application that incorporates PostgreSQL to manage location data. The architecture follows clean architecture principles, ensuring a separation of concerns. Each layer is clearly defined, and the use of patterns like the Repository helps manage data access and transactions effectively.

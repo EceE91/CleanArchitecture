@@ -103,10 +103,10 @@ Use an API Gateway to centralize and manage all incoming API traffic. This allow
     /UnitTests - ApiDbContextIntegrationTests.cs - LocationsControllerIntegrationTests.cs - DistanceCalculatorControllerIntegrationTests.cs
     /IntegrationTests - LocationsControllerTests.cs - DistanceCalculatorControllerTests.cs
 /pipelines
-/global.json
-/.gitignore
-/Directory.Packages.props
-/Directory.Build.props
+global.json
+.gitignore
+Directory.Packages.props
+Directory.Build.props
 ```
 
 This implementation creates a robust and maintainable ASP.NET Core application that incorporates PostgreSQL to manage location data. The architecture follows clean architecture principles, ensuring a separation of concerns. Each layer is clearly defined, and the use of patterns like the Repository helps manage data access and transactions effectively.
